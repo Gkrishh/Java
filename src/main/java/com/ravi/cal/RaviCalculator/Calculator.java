@@ -2,8 +2,8 @@ package com.ravi.cal.RaviCalculator;
 
 public class Calculator {
 
-	public long first;
-	public long second;
+	private long first;
+	private long second;
 	
 	public Calculator(long first, long second){
 		this.first = first;
@@ -33,7 +33,7 @@ public class Calculator {
 	// Product - *
 	public long mulFucn(long first, long second){
 		
-		return first/second;
+		return first*second;
 	}
 	
 	
@@ -43,7 +43,6 @@ public class Calculator {
 		long second = Long.parseLong(args[1]);
 		
 		Calculator cal = new Calculator(first, second);
-		
 		String output = String.format("\n*** Your Results ***\n\nFirst: %d\nSecond: %d\n\nSum : %d\nDifference : %d\nProduct : %d\n\n", cal.first, cal.second, cal.addFucn(first, second), cal.subFucn(first, second), cal.mulFucn(first, second));
 	    System.out.println(output);
 	}
